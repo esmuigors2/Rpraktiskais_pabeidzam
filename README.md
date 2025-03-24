@@ -13,18 +13,20 @@
    Līmenis ir burta un ciparu kombinācija, kuras atdala punkti; piem., a7 un x3 abi ir līmeņi, pirmais ir a faktora 8. līmenis un otrais ir x faktora 4. līmenis.
  5. saskalda kordat kolonnu "Slope" sarakstā pēc b faktora vērtībām un saglabā to mainīgajā sl.by.b, kura saturu izdrukā datnē results.txt;
  6. izveido kolonnu ar nosaukumu "Average", kurā saglabā aritmētisko vidējo no kolonnām "Slope", "Intercept" un "adj.r.squared";
- 7. aprēķina standartnovirzi pa f faktora līmeņiem un izvada to datnē;
- 8. nokopē no krdat uz citu datu satvaru ar nosaukumu prockordat tikai tās rindiņas, kurām vērtība "adj.r.squared" kolonnā ir lielāka par 0.7;
+ 7. aprēķina standartnovirzi pa f faktora līmeņiem (visām kolonnām) un izvada to datnē;
+ 8. nokopē no kordat uz citu datu satvaru ar nosaukumu prockordat tikai tās rindiņas, kurām vērtība "adj.r.squared" kolonnā ir lielāka par 0.7 (ja kolonnā ir pozitīvas vērtības) vai lielāka par -0.3 (ja vērtības kolonnā ir negatīvas);
  9. prockordat pārraksta "Slope" kolonnas vērtību, ierakstot šūnās formulas 1-1/k rezultātu, kur k ir "Slope" sākotnējā vērtība;
  10. izdrukā prockordat datnē results.txt;
- 11. uzzīmē izkliedes grafiku kur uz horizontālās ass ir kolonnas "MAD" vērtībus, bet uz vertikālās – kolonnas "Average" vērtības;
+ 11. uzzīmē izkliedes grafiku kur uz horizontālās ass ir kolonnas "MAD" vērtībus, bet uz vertikālās – kolonnas "Average" vērtības no datu satvara kordat;
      Grafiks ir jāsaglabā datnē scatter.svg .
- 13. uzzīmē vienā attēlā sagrupētu kastu grafiku no "Intercept" kolonnas datiem, grupējot pēc f faktora vērtībām un variējot pēc tām arī kastes izskatu.
+ 13. uzzīmē vienā attēlā sagrupētu kastu grafiku no "Intercept" kolonnas datiem no datu satvara kordat, grupējot pēc f faktora vērtībām un variējot pēc tām arī kastes izskatu.
      Grafiks ir jāsaglabā datnē boxplot.svg .
  
  Programmai ir jāatbilst vairākiem kritērijiem:
  * ielasot datni, ir jāattīra dati no nejaušām atstarpēm, kas liedz korekti pārveidot kolonnas par faktoriem (ielasīšanas funkcijai ir attiecīgais arguments);
  * pirmā kolonna datnē ir jāpārveido par datu satvara kordat rindu nosaukumiem.
+ 
+ Ja Jums kaut kas nesanāk – izdariet to, kas sanāk; piemēram, ja nezināt, kā lai 7. punktā izdrukā standartnovirzi pa f līmeņiem visām kolonnām, izdariet to jebkurai vienai kolonnai.
  
  Papilduzdevums: atrast, kurš faktora līmenis (skat. 4. punktu uzdevumos) kordat rindu nosakumos ir sastopams visbiežāk, un izvadīt uz ekrāna tikai tās prockordat rindiņas, kuru nosaukumi satur šo līmeni.
  
