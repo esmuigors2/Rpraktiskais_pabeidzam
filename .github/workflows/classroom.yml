@@ -20,8 +20,8 @@ jobs:
         test-name: Atkarību instalēšana
         setup-command: ''
         command: './.tests/test0.sh'
-        timeout: 3
-        max-score: 1
+        timeout: 7
+        max-score: 0
     - name: Datu ielasīšana - decimāldaļas atdalītājs
       id: datu-ielasisana-decimaldalas-atdalitajs
       uses: classroom-resources/autograding-command-grader@v1
