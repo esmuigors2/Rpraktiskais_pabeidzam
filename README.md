@@ -2,6 +2,9 @@
  Uzrakstiet programmu R valodā, kura ielasa un apstrādā datus no teksta datnes.
 
 ## Uzdevuma variants ir atlikums no Jūsu studentu apliecības numura dalīšanas ar 20
+ Piemēram, ja Jūsu apliecības numurs ir 211RXY036, tad Jums ir 16. variants, t.i., ir jāizmanto fails "variants16.txt".
+
+ Ja Jums ir 0. variants, izmantojiet failu "variants20.txt".
  
  Jums ir jāizdzēš visi pārējie faili variantsNN.txt, un ir jāatstāj tikai savam variantam atbilstošais.
 
