@@ -20,18 +20,18 @@ jobs:
         test-name: Atkarību instalēšana
         setup-command: ''
         command: './.tests/test0.sh'
-        timeout: 7
-        max-score: 0
-    - name: Datu ielasīšana decimāldaļas atdalītājs
+        timeout: 3
+        max-score: 1
+    - name: Datu ielasīšana - decimāldaļas atdalītājs
       id: datu-ielasisana-decimaldalas-atdalitajs
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Datu ielasīšana decimāldaļas atdalītājs
+        test-name: Datu ielasīšana - decimāldaļas atdalītājs
         setup-command: ''
         command: './.tests/test1.sh'
         timeout: 3
         max-score: 1
-    - name: Datu ielasīšana lieko atstarpju izvākšana
+    - name: Datu ielasīšana - lieko atstarpju izvākšana
       id: datu-ielasisana-lieko-atstarpju-izvaksana
       uses: classroom-resources/autograding-command-grader@v1
       with:
@@ -160,21 +160,21 @@ jobs:
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        ATKARIBU-INSTALESANA_RESULTS: "${{steps.atkaribu-instalesana.result}}"
-        DATU-IELASISANA-DECIMALDALAS-ATDALITAJS_RESULTS: "${{steps.datu-ielasisana-decimaldalas-atdalitajs.result}}"
-        DATU-IELASISANA-LIEKO-ATSTARPJU-IZVAKSANA_RESULTS: "${{steps.datu-ielasisana-lieko-atstarpju-izvaksana.result}}"
-        PARVEIDOSANA-PAR-FAKTORIEM_RESULTS: "${{steps.parveidosana-par-faktoriem.result}}"
-        IZVADES-PARVIRZISANA_RESULTS: "${{steps.izvades-parvirzisana.result}}"
-        APKOPOJUMA-IZVADISANA_RESULTS: "${{steps.apkopojuma-izvadisana.result}}"
-        SLOPE-DALISANA-PEC-B_RESULTS: "${{steps.slope-dalisana-pec-b.result}}"
-        AVERAGE-KOLONNAS-RADISANA_RESULTS: "${{steps.average-kolonnas-radisana.result}}"
-        TAPPLY-SECIGA-PIELIETOSANA-KORDAT_RESULTS: "${{steps.tapply-seciga-pielietosana-kordat.result}}"
-        PROCKORDAT-RADISANA_RESULTS: "${{steps.prockordat-radisana.result}}"
-        SLOPE-PARVEIDOSANA_RESULTS: "${{steps.slope-parveidosana.result}}"
-        PROCKORDAT-IZDRUKA_RESULTS: "${{steps.prockordat-izdruka.result}}"
-        SVG-IERAKSTISANA_RESULTS: "${{steps.svg-ierakstisana.result}}"
-        SVG-IERAKSTA-BEIGAS_RESULTS: "${{steps.svg-ieraksta-beigas.result}}"
-        IZKLIEDES-GRAFIKS_RESULTS: "${{steps.izkliedes-grafiks.result}}"
-        KASTU-GRAFIKS_RESULTS: "${{steps.kastu-grafiks.result}}"
+        ATKARIBU-INSTALESANA_RESULTS: "${{steps.atkaribu-instalesana.outputs.result}}"
+        DATU-IELASISANA-DECIMALDALAS-ATDALITAJS_RESULTS: "${{steps.datu-ielasisana-decimaldalas-atdalitajs.outputs.result}}"
+        DATU-IELASISANA-LIEKO-ATSTARPJU-IZVAKSANA_RESULTS: "${{steps.datu-ielasisana-lieko-atstarpju-izvaksana.outputs.result}}"
+        PARVEIDOSANA-PAR-FAKTORIEM_RESULTS: "${{steps.parveidosana-par-faktoriem.outputs.result}}"
+        IZVADES-PARVIRZISANA_RESULTS: "${{steps.izvades-parvirzisana.outputs.result}}"
+        APKOPOJUMA-IZVADISANA_RESULTS: "${{steps.apkopojuma-izvadisana.outputs.result}}"
+        SLOPE-DALISANA-PEC-B_RESULTS: "${{steps.slope-dalisana-pec-b.outputs.result}}"
+        AVERAGE-KOLONNAS-RADISANA_RESULTS: "${{steps.average-kolonnas-radisana.outputs.result}}"
+        TAPPLY-SECIGA-PIELIETOSANA-KORDAT_RESULTS: "${{steps.tapply-seciga-pielietosana-kordat.outputs.result}}"
+        PROCKORDAT-RADISANA_RESULTS: "${{steps.prockordat-radisana.outputs.result}}"
+        SLOPE-PARVEIDOSANA_RESULTS: "${{steps.slope-parveidosana.outputs.result}}"
+        PROCKORDAT-IZDRUKA_RESULTS: "${{steps.prockordat-izdruka.outputs.result}}"
+        SVG-IERAKSTISANA_RESULTS: "${{steps.svg-ierakstisana.outputs.result}}"
+        SVG-IERAKSTA-BEIGAS_RESULTS: "${{steps.svg-ieraksta-beigas.outputs.result}}"
+        IZKLIEDES-GRAFIKS_RESULTS: "${{steps.izkliedes-grafiks.outputs.result}}"
+        KASTU-GRAFIKS_RESULTS: "${{steps.kastu-grafiks.outputs.result}}"
       with:
         runners: atkaribu-instalesana,datu-ielasisana-decimaldalas-atdalitajs,datu-ielasisana-lieko-atstarpju-izvaksana,parveidosana-par-faktoriem,izvades-parvirzisana,apkopojuma-izvadisana,slope-dalisana-pec-b,average-kolonnas-radisana,tapply-seciga-pielietosana-kordat,prockordat-radisana,slope-parveidosana,prockordat-izdruka,svg-ierakstisana,svg-ieraksta-beigas,izkliedes-grafiks,kastu-grafiks
