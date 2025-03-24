@@ -17,15 +17,6 @@ USER root
 RUN usermod --shell /bin/bash root
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends  \
-        python3-pip \
-        libgit2-dev \
-        libcurl4-openssl-dev \
-        libssl-dev \
-        libxml2-dev \
-        libxt-dev \
-        libfontconfig1-dev \
-        libopenblas64-dev \
-        libcairo2-dev \
         r-cran-ggplot2 \
         r-cran-svglite \
         r-cran-tidyverse \
@@ -43,15 +34,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         gawk \
         sed \
         perl \
-        cmake \
-        make \
-        gcc \
-        g++ \
-        gfortran \
-        git \
         pcregrep \
     && apt-get autoremove -y && apt-get clean -y
-# this does not work, dependency problems for packages && Rscript -e "install.packages(c('devtools','languageserver','httpgd','Rfast'))"
 
 RUN groupadd ruser
 RUN useradd -d /home/ruser -m -g ruser ruser
