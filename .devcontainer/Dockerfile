@@ -34,6 +34,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         gawk \
         sed \
         perl \
+        git \
         pcregrep \
     && apt-get autoremove -y && apt-get clean -y
 
